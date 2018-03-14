@@ -54,37 +54,7 @@ public class CustomerMock {
         return s;
     }
 
-    public static class CustomerRequest {
-
-        private String executor;
-
-        private String parameter;
-
-        public CustomerRequest() {
-        }
-
-        public CustomerRequest(String instancia) {
-            this.parameter = instancia;
-            this.executor = "TESTE";
-        }
-
-        public String getExecutor() {
-            return executor;
-        }
-
-        public void setExecutor(String executor) {
-            this.executor = executor;
-        }
-
-        public String getParameter() {
-            return parameter;
-        }
-
-        public void setParameter(String parameter) {
-            this.parameter = parameter;
-        }
-    };
-
+   
 //    public static EfikaCustomer getCustomer(String instancia) {
 //        try {
 //
