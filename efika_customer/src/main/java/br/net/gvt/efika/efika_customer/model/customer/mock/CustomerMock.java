@@ -54,7 +54,6 @@ public class CustomerMock {
         return s;
     }
 
-   
 //    public static EfikaCustomer getCustomer(String instancia) {
 //        try {
 //
@@ -488,6 +487,69 @@ public class CustomerMock {
         s.setVelUp(1024l);
 
         c.setServicos(s);
+
+        return c;
+    }
+
+    public static EfikaCustomer mockIt(String instancia) {
+        EfikaCustomer c = new EfikaCustomer();
+        InventarioRede r = new InventarioRede();
+        InventarioServico s = new InventarioServico();
+
+        r.setIpDslam("0.0.0.0");
+        r.setCvlan(2849);
+        r.setRin(14);
+        r.setVlanVoip(1014);
+        r.setVlanVod(3014);
+        r.setVlanMulticast(4000);
+        r.setSlot(7);
+        r.setPorta(7);
+        r.setSequencial(2749);
+        r.setLogica(17);
+        s.setTipoTv(TecnologiaTv.IPTV);
+        s.setTipoLinha(TecnologiaLinha.SIP);
+        s.setVelDown(51200l);
+        s.setVelUp(25600l);
+        c.setServicos(s);
+
+        switch (instancia) {
+            case "1156421252":
+                r.setModeloDslam("MA5600T_FV1");
+                r.setPlanta(OrigemPlanta.VIVO1);
+                break;
+            case "4131496819":
+                r.setModeloDslam("SUVD11");
+                r.setPlanta(OrigemPlanta.VIVO2);
+                break;
+            case "1156422022":
+                r.setModeloDslam("MA5103");
+                r.setPlanta(OrigemPlanta.VIVO1);
+                break;
+            case "1135300853":
+                r.setModeloDslam("SUVD1");
+                r.setPlanta(OrigemPlanta.VIVO2);
+                break;
+            case "1125252525":
+                r.setModeloDslam("MA5100");
+                r.setPlanta(OrigemPlanta.VIVO1);
+                break;
+            case "4131492882":
+                r.setModeloDslam("SUVD3");
+                r.setPlanta(OrigemPlanta.VIVO2);
+                break;
+            case "1151813390":
+                r.setModeloDslam("ALCATELATM");
+                r.setPlanta(OrigemPlanta.VIVO2);
+                break;
+            case "4130176173":
+                r.setModeloDslam("BA1000");
+                r.setPlanta(OrigemPlanta.VIVO2);
+                break;
+            default:
+                break;
+        }
+
+        c.setRede(r);
 
         return c;
     }
