@@ -493,6 +493,7 @@ public class CustomerMock {
 
     public static EfikaCustomer mockIt(String instancia) {
         EfikaCustomer c = new EfikaCustomer();
+        c.setInstancia(instancia);
         InventarioRede r = new InventarioRede();
         InventarioServico s = new InventarioServico();
 
