@@ -514,7 +514,7 @@ public class CustomerMock {
 
         switch (instancia) {
             case "1156421252":
-                r.setModeloDslam("MA5600T_FV1");
+                r.setModeloDslam("MA5600T");
                 r.setPlanta(OrigemPlanta.VIVO1);
                 break;
             case "4131496819":
@@ -552,5 +552,10 @@ public class CustomerMock {
         c.setRede(r);
 
         return c;
+    }
+
+    public static String mockIT() {
+        return "1156421252;1156863239;1156421252;4131496819;1156422022;"
+                + "1135300853;1125252525;4131492882;1151813390;4130176173";
     }
 }
