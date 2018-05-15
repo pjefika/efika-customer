@@ -540,13 +540,15 @@ public class CustomerMock {
                 break;
             case "1151813390":
                 r.setModeloDslam("ALCATELATM");
-                r.setPlanta(OrigemPlanta.VIVO2);
+                r.setPlanta(OrigemPlanta.VIVO1);
                 break;
             case "4130176173":
                 r.setModeloDslam("BA1000");
                 r.setPlanta(OrigemPlanta.VIVO2);
                 break;
             default:
+                r.setModeloDslam("SUVD3");
+                r.setPlanta(OrigemPlanta.VIVO2);
                 break;
         }
 
@@ -556,7 +558,9 @@ public class CustomerMock {
     }
 
     public static String mockIT() {
-        return "1156421252;1156863239;1156421252;4131496819;1156422022;"
-                + "1135300853;1125252525;4131492882;1151813390;4130176173";
+        return "1151834829;1135300239;1135300782;1135310155;1136891110;"
+                + "9156420321;4131495583;1135302490;1151842138;1156421670;"
+                + "1135302098;1135310138;1156421252;4131496819;1151842070;4131522654;"
+                + "1156422022;1135300853;1136891105;4131521805";
     }
 }
